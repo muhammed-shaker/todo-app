@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,100&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);  
+    font-family: "Poppins", sans-serif;
+}
+
+.app{
+    background-color: rgba(255, 255, 255, 0.8);
+    min-width: 360px;
+    padding: 1em;
+    padding-bottom: 4em; 
+    border-radius: .8em;
+}
+
+.app > h1{
+    text-align: center;
+    font-weight: bold;
+    margin-block: 1em;
+}
+
+.app form{
+    display: flex;
+}
+
+.app form input{
+    flex: 1;
+    border: 1px dotted #a2acb9;
+    outline: none;
+    padding: 1em;
+    border-radius: 2em 0 0 2em;
+    font-family: inherit;
+}
+
+.app form button{
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 0  2em 2em 0;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.app .task-list{
+    list-style: none;
+    margin-top: 2em;
+}
+
+.app .task-list .task{
+    margin-bottom: 1.5em;
+    padding-left: 3em;
+    font-size: small;
+    position: relative;
+    cursor: pointer;
+}
+
+.app .task-list .task::before{
+    content:'';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.app .task-list .task.checked{
+    text-decoration: line-through;
+    color:#a2acb9
+}
+
+.app .task-list .task.checked::before{
+    background-image: url('images/checked.svg');
+}
+
+.app .task-list .task i{
+    font-size: 2em;
+    padding: .5em;
+    border-radius: 50%;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    cursor: pointer;
+}
+
+.clear-btn{
+    display: block;
+    margin: 3em auto 0;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-size: inherit;
+    cursor: pointer;
+}
